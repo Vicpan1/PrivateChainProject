@@ -15,10 +15,11 @@ fs.readdir("../transhash", function(err, files)
     console.log('check=>'+i);
 
     Filehandle(i, files[i]);
-
+  }
 })
 
-function Filehandle(i, FileName) {
+function Filehandle(i, FileName) 
+{
   fs.readFile("../transhash/transhash"+i+".txt", function (error, data)
     {
     // 讀取檔案內容
@@ -27,7 +28,6 @@ function Filehandle(i, FileName) {
         console.log('讀取檔案失敗');
         return;
       }
-
       console.log(data.toString());
       var take = web3.eth.getTransaction(data.toString()).input;//利用交易hash獲取區塊鏈上的metadata
       var download = web3.toAscii(take);//將資料由16進制轉乘Ascii
