@@ -32,7 +32,7 @@ function Filehandle(i, FileName) {
     var js9 = 'console.log(error);'+"\r\n";
     var js10 = 'console.log("文件上傳成功'+i+'");'+"\r\n";
     var js11 = '});'+"\r\n";
-    fs.writeFile( "metadata"+i+'.js' , js0+js1+js2+js3+js4+js5+js6+js7+js8+js9+js10+js11 ,function (error)//要讀取的檔案
+    fs.writeFile( "../eth-netstats/metadata"+i+'.js' , js0+js1+js2+js3+js4+js5+js6+js7+js8+js9+js10+js11 ,function (error)//要讀取的檔案
 
     {//在指定的目錄下，生成一個檔案，並將指定的資料寫入
       console.log(error);
